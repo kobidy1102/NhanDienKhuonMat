@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item_person"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/custom_list_trained_img_avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/user"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+    <View
+        android:layout_marginTop="2dp"
+        android:background="@color/xam"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+
+        android:textStyle="bold"
+        android:id="@+id/custom_list_trained_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_marginTop="1dp"
+        android:background="@color/xam"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:weightSum="100"
+        android:layout_width="match_parent"
+        android:layout_height="20dp">
+
+        <ImageView
+            android:id="@+id/img_add_face"
+            android:background="@color/xanhNhe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            app:srcCompat="@android:drawable/ic_input_add" />
+        <View
+            android:layout_marginTop="1dp"
+            android:background="@color/xam"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView
+            android:id="@+id/img_delete_person"
+            android:background="@color/xanhNhe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            app:srcCompat="@android:drawable/ic_delete" />
+    </LinearLayout>
+
+
+</LinearLayout>

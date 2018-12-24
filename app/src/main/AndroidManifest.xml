@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pc_asus.nguoimu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Nhận diện khuôn mặt"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="face" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_api_key" />
+
+        <activity
+            android:name=".SignInActivity"
+            android:label="Nhận diện khuôn mặt"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="              Đăng Ký"
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="              Tài Khoản"
+            android:name=".AccountSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:label="          Màn Hình Chính"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="               Bạn Bè"
+            android:name=".FriendsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="               Tìm Kiếm"
+            android:name=".SearchTNV.SearchTnvActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="               Video Call"
+            android:name=".VideoCallViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="            Thêm Địa Điểm"
+            android:name=".PlacesOftenCome.AddPlaceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="          Địa Chỉ Đã Lưu"
+            android:name=".PlacesOftenCome.PlacesOftenComeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+
+            android:label="                 Training"
+            android:name=".FaceRecognition.TrainingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FaceRecognition.liveVideo.FaceTrackerActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".CheckOpenApp.CheckOpenAppService" />
+
+        <receiver android:name=".CheckOpenApp.CheckPressVolumReceiver">
+            <intent-filter>
+                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".FaceRecognition.FaceRecognitionActivity" />
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:label="         Bạn Bè Đã Train"
+            android:name=".FaceRecognition.ListTrainedActivity" />
+        <activity
+            android:parentActivityName=".FaceRecognition.ListTrainedActivity"
+            android:label="          Thêm Khuôn Mặt"
+            android:name=".FaceRecognition.AddFaceToPersonActivity"></activity>
+    </application>
+
+</manifest>

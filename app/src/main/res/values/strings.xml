@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NguoiMu</string>
+    <string name="agora_app_id">3abdf20e6df24f6aa79b765000643885</string>
+    <string name="title_activity_video_chat">VideoChatActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="map_api_key">AIzaSyBbW4BSGQV6h11Z9bh1XoE-Yt91o6IalPE</string>
+    <string name="forgot_password"><u>Quên mật khẩu</u></string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+
+
+</resources>
